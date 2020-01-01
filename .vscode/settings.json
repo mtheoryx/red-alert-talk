@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "**/*.env": true
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#ee4c4c",
+    "titleBar.inactiveBackground": "#993374"
+  },
+  "git.ignoreLimitWarning": true
+}
