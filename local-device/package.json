@@ -1,0 +1,23 @@
+{
+  "name": "local-device",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "watch" : {
+    "deploy": "./code.py"
+  },
+  "scripts": {
+    "deploy": "node ./scripts/deploy",
+    "watch": "npm-watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0"
+  }
+}
