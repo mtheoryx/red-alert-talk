@@ -193,3 +193,4 @@ outline/
 **/.vscode/
 
 iot-receiver/src/iot-receiver.cpp
+integrations/ml-findings/amazon-guardduty-tester/
