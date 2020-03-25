@@ -2,6 +2,7 @@ import time
 import board
 import neopixel
 import busio
+import digitalio
 
 num_chars_read = 32
 
@@ -21,8 +22,8 @@ num_pixels = 10
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
 ORDER = neopixel.GRB
 
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=False,
-                           pixel_order=ORDER)
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels,
+                           brightness=0.2, auto_write=False, pixel_order=ORDER)
 
 
 def wheel(pos):
@@ -58,12 +59,12 @@ def rainbow_cycle(wait):
 
 good_color = (0, 255, 0)
 bad_color = (255, 0, 0)
-neutral_color = (255, 255, 255)
-# neutral_color = (66, 33, 99)
+neutral_color = (66, 33, 99)
 
 active_color = neutral_color
 
 while True:
+
     data = uart.read(32)
 
     if data is not None:
@@ -82,25 +83,3 @@ while True:
 
     pixels.fill(active_color)
     pixels.show()
-    # Comment this line out if you have RGBW/GRBW NeoPixels
-    # pixels.fill((255, 0, 0))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((255, 0, 0, 0))
-    # pixels.show()
-    # time.sleep(1)
-
-    # Comment this line out if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 255, 0))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 255, 0, 0))
-    # pixels.show()
-    # time.sleep(1)
-
-    # Comment this line out if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 0, 255))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 0, 255, 0))
-    # pixels.show()
-    # time.sleep(1)
-
-    # rainbow_cycle(0.001)    # rainbow cycle with 1ms delay per step
