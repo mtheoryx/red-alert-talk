@@ -5,6 +5,8 @@ int setAlert(String level);
 void setup()
 {
 
+  // Define a cloud function
+  // Set value to a local function
   Particle.function("alert", setAlert);
 
   pinMode(led, OUTPUT);
@@ -43,9 +45,8 @@ int setAlert(String level)
 void loop()
 {
   digitalWrite(led, HIGH);
-  delay(500);
+  delay(1500);
   digitalWrite(led, LOW);
-
   switch (alertLevel)
   {
   case 0:

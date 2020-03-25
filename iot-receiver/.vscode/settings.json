@@ -5,7 +5,7 @@
     "files.associations": {
         "*.ino": "cpp"
     },
-    "particle.targetDevice": "aws-photon",
+    "particle.targetDevice": "redalert",
     "particle.firmwareVersion": "1.4.4",
-    "particle.targetPlatform": "photon"
+    "particle.targetPlatform": "boron"
 }
