@@ -1,0 +1,18 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "lambda-local --lambda-path index.js --event-path events/cpu.json",
+    "bundle": "rm -f SlackNotifyDRPTest.zip ; zip SlackNotifyDRPTest.zip -r *.js *.json node_modules/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "dotenv": "^8.2.0",
+    "lambda-local": "^1.6.3"
+  }
+}
