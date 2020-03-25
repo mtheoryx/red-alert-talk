@@ -186,3 +186,9 @@ override.tf.json
 
 **/node_modules/*
 engineer-notes.md
+
+**/.env
+
+outline/
+**/.vscode/
+
